@@ -5,7 +5,7 @@ public class Bar {
         StringBuilder builder = new StringBuilder();
         second(builder, name);
         third(builder, age);
-        builder.append(fifth(flag));
+        builder.append(fifth(builder, flag));
         return summary(builder);
     }
 
@@ -21,8 +21,9 @@ public class Bar {
         builder.append("I am ").append(age).append(" years old. ");
     }
 
-    public String fifth(boolean flag) {
+    public String fifth(StringBuilder builder, boolean flag) {
         String msg = flag ? "I like banana" : "I don't like banana";
+        builder.append("Also, ");
         return msg;
     }
 
