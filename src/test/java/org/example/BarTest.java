@@ -14,4 +14,10 @@ public class BarTest {
         Bar m = new Bar();
         assertEquals("My name is test. I am 11 years old. I like banana!", m.first("test", 1, true));
     }
+
+    @Test
+    public void testBarAgain() {
+        Bar m = new Bar();
+        assertEquals("My name is bye. I am 21 years old. I don't like banana!", m.first("bye", 11, false));
+    }
 }

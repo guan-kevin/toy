@@ -22,7 +22,7 @@ public class Bar {
     }
 
     public String fifth(boolean flag) {
-        String msg = flag ? "I like banana" : "I don't link banana";
+        String msg = flag ? "I like banana" : "I don't like banana";
         return msg;
     }
 
