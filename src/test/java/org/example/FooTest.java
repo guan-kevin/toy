@@ -13,8 +13,9 @@ public class FooTest {
         Foo m = new Foo();
 
         List<Integer> list = new ArrayList<>();
-        for (int j = 0; j < 1000; j++)
+        for (int j = 0; j < 10; j++)
             list.add(j);
-        m.foo(list);
+
+        assertEquals(45000000, m.foo(list));
     }
 }

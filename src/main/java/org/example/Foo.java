@@ -1,18 +1,17 @@
 package org.example;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 public class Foo {
 
     public int foo(List<Integer> list) {
-        int k = 0;
-        for (int i = 0; i < 100000; i++) {
-            Collection<Integer> c = Collections.synchronizedCollection(list);
-            synchronized (c) {
-                for (Integer j : c)
-                    k += j;
-            }
-        }
-        return k;
+        int total = 0;
+        for (int i = 0; i < 1000000; i++)
+            for (Integer j : list)
+                total += j;
+        return total;
     }
 }
