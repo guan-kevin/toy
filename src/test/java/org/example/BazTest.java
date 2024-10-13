@@ -7,7 +7,7 @@ public class BazTest {
     public void testBaz() {
         Baz baz = new Baz();
         for (int i = 0; i < 100; i++) {
-            baz.call();
+            baz.call(i > 0);
         }
     }
 }

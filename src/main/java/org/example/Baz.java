@@ -21,15 +21,21 @@ public class Baz {
         }
     }
 
-    public void call() {
+    public void call(boolean violation) {
         ArrayList<String> baz = new ArrayList<>();
         baz.add("a");
         baz.add("b");
         baz.add("c");
 
         BazIterator it = new BazIterator(baz.iterator());
+        if (!violation)
+            it.hasNext();
         it.next();
+        if (!violation)
+            it.hasNext();
         it.next();
+        if (!violation)
+            it.hasNext();
         it.next();
     }
 }
